@@ -1,0 +1,67 @@
+#N canvas 752 99 846 816 10;
+#X text 182 24 good;
+#X text 579 24 bad;
+#X obj 128 180 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 102 306 env~;
+#X floatatom 102 334 5 0 0 0 - - -, f 5;
+#X obj 159 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 103 95 somesound.wav;
+#X text 134 155 (2) play!;
+#X text 117 361 don't forget to switch 'dsp' on.;
+#X text 146 312 (3) audio output;
+#X text 180 248 (4) play 'done' signal.;
+#X obj 152 462 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 183 515 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 124 427 how to make a LOOPING...;
+#X text 113 544 when it 's done \, it will self-trigger.;
+#X obj 152 606 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 183 659 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 135 570 how to stop then?;
+#X obj 183 681 spigot;
+#X obj 222 659 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 549 174 bang;
+#X obj 560 198 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 585 200 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 615 268 bng 15 250 50 0 empty empty if_u_do_this_before_loading..
+17 7 0 10 -262144 -1 -1;
+#X msg 531 152 nonexist.wav;
+#X floatatom 593 224 5 0 0 0 - - -, f 5;
+#X text 561 340 ERRORS...;
+#X text 646 643 dianaband;
+#X text 646 663 2016;
+#X obj 103 216 wav~;
+#X obj 127 498 wav~;
+#X obj 127 642 wav~;
+#X obj 549 295 wav~;
+#X text 111 67 (1) sound filename! (wav/aiff);
+#X obj 57 252 dac~;
+#X connect 2 0 29 1;
+#X connect 3 0 4 0;
+#X connect 6 0 29 0;
+#X connect 11 0 30 1;
+#X connect 12 0 11 0;
+#X connect 15 0 31 1;
+#X connect 16 0 18 0;
+#X connect 18 0 15 0;
+#X connect 19 0 18 1;
+#X connect 20 0 32 0;
+#X connect 21 0 32 0;
+#X connect 22 0 32 0;
+#X connect 23 0 32 1;
+#X connect 24 0 32 0;
+#X connect 25 0 32 0;
+#X connect 29 0 3 0;
+#X connect 29 0 34 0;
+#X connect 29 0 34 1;
+#X connect 29 1 5 0;
+#X connect 30 1 12 0;
+#X connect 31 1 16 0;
